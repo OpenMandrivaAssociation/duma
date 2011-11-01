@@ -27,7 +27,7 @@ impossible-to-catch overrun bugs. DUMA is a fork of Bruce Perens'
 Electric Fence library.
 
 %package devel
-Summary:	Header files, libraries and development documentation for %{name}.
+Summary:	Header files, libraries and development documentation for %{name}
 Group:		Development/Other
 Requires:	%{name} = %{version}-%{release}
 
@@ -54,8 +54,8 @@ you will need to install %{name}-devel.
     LIB_INSTALL_DIR="%{buildroot}%{_libdir}" \
     MAN_INSTALL_DIR="%{buildroot}%{_mandir}/man3/"
 
-rm -r %{buildroot}/%{_libdir}/libduma.a
-rm -r %{buildroot}/%{_docdir}/duma/README.txt
+#rm -r % {buildroot}/% {_libdir}/libduma.a
+#rm -r % {buildroot}/% {_docdir}/duma/README.txt
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -64,15 +64,15 @@ rm -r %{buildroot}/%{_docdir}/duma/README.txt
 
 %files
 %defattr(-, root, root, 0755)
-%doc INSTALL TODO
+%doc INSTALL TODO README.txt
 %doc %{_mandir}/man3/duma.3*
 %{_bindir}/duma
 %{_libdir}/libduma.so.*
-#%exclude %{_docdir}/duma/README.txt
+%exclude %{_docdir}/duma/README.txt
 
 %files devel
 %defattr(-, root, root, 0755)
 %{_includedir}/duma*.h
 %{_includedir}/noduma.h
-#%exclude %{_libdir}/libduma.a
+%exclude %{_libdir}/libduma.a
 %{_libdir}/libduma.so
