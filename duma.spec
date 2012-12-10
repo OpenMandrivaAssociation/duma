@@ -76,3 +76,12 @@ rm -r %{buildroot}/%{_docdir}/duma/README.txt
 %{_includedir}/noduma.h
 #% exclude % {_libdir}/libduma.a
 %{_libdir}/libduma.so
+
+
+%changelog
+* Tue Nov 01 2011 Alexander Khrukin <akhrukin@mandriva.org> 2.5.15-1mdv2011.0
++ Revision: 709721
+- build fixes with not needed files like README.txt and .a
+- rpmlint fixes
+- imported package duma
+
