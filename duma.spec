@@ -10,7 +10,7 @@ Version:	2.5.15
 Release:	2
 License:	GPL
 Group:		Development/Other
-URL:		http://duma.sourceforge.net/
+URL:		https://duma.sourceforge.net/
 
 Source:		http://dl.sf.net/duma/duma_%{real_version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
